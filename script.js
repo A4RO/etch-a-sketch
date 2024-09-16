@@ -23,10 +23,13 @@ function createGrid(size) {
             newDiv.setAttribute("class", "grid-box"); 
             gridContainer.appendChild(newDiv);
             //Box width and height should be container's size divided by amount of boxes
-            newDiv.style = `width: ${700/size}px; height: ${700/size}px; background-color: red;`
+            newDiv.style = `width: ${700/size}px; height: ${700/size}px; background-color: red; opacity: 1;`
             newDiv.addEventListener("mouseover", function(e) {
+                console.log(e);
                 color = randomColor();
                 e.target.style.backgroundColor = color;
+                e.target.style.opacity -= 0.1;
+                console.log(e.target.style.opacity);
             }) 
         }
     }
