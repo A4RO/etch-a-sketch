@@ -25,8 +25,13 @@ function createGrid(size) {
             //Box width and height should be container's size divided by amount of boxes
             newDiv.style = `width: ${700/size}px; height: ${700/size}px; background-color: red;`
             newDiv.addEventListener("mouseover", function(e) {
-                e.target.style.backgroundColor = "blue";
+                color = randomColor();
+                e.target.style.backgroundColor = color;
             }) 
         }
     }
+}
+
+function randomColor() {
+    return `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
 }
