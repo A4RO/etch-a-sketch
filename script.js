@@ -7,5 +7,8 @@ for(let i = 0; i < 16; i++) {
         gridContainer.appendChild(newDiv);
         //Box width and height should be container's size divided by amount of boxes
         newDiv.style = `width: ${700/16}px; height: ${700/16}px; background-color: red;`
+        newDiv.addEventListener("mouseover", function(e) {
+            e.target.style.backgroundColor = "blue";
+        }) 
     }
 }
